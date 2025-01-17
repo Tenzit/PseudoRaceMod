@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+		<Group name="Speedups" display="1. Speedups">
+			<Property name="ESG" display="ESG" type="bool" defaultvalue="true">
+				<HelpText>Automatically enable ESG.</HelpText>
+			</Property>	
+			<Property name="InLevelCutsceneSkip" display="In Level Cutscene Skip" type="bool" defaultvalue="true">
+				<HelpText>Skip in-level cutscenes (like the faker cutscene).</HelpText>
+			</Property>
+			<Property name="CutsceneSkip" display="Cutscene Skip" type="bool" defaultvalue="true">
+				<HelpText>Skip cutscenes between levels.</HelpText>
+			</Property>	
+	</Group>
+</Groups>
+</ConfigSchema>
