@@ -48,14 +48,47 @@ extern "C"
 			// CalcTotalScore
 			// Don't display HUD function
 			WriteData<7>((void *)0x44f845, 0x90);
-			// Go to state 0x10 right after state 0x0
-			WriteData<1>((void *)0x44f84e, 0x10);
+			// Go to state 0x2 right after state 0x0
+			// to do the rank calc
+			WriteData<1>((void *)0x44f84e, 0x2);
+			// Skip the fade in state 2
+			WriteData<1>((void*)0x44f8c4, 0xff);
+			// Go to state 0xc
+			// for part 2 of rank calc
+			WriteData<1>((void*)0x44f8eb, 0xc);
+			// Skip the score countup
+			WriteData<2>((void*)0x44fae5, 0x90);
+			WriteData<2>((void*)0x44faeb, 0x90);
+			// Set next state to 0x10
+			WriteData<1>((void*)0x44fb0a, 0x10);
+			// Skip cash register sfx (2 spots)
+			WriteData<5>((void*)0x44fb0e, 0x90);
+			WriteData<5>((void*)0x44fba0, 0x90);
+			// Skip loop in state 0xc
+			WriteData<0x2f>((void*)0x44fb1e, 0x90);
+			// Skip saving file in state 0xc
+			WriteData<5>((void*)0x44fb63, 0x90);
+			// Skip random function at the end of 0x10
+			WriteData<5>((void*)0x44fcec, 0x90);
 
 			// CalcTotalTime
 			// Don't display HUD function
 			WriteData<7>((void *)0x450805, 0x90);
-			// Go to state 0x8 right after state 0x0
-			WriteData<1>((void *)0x450812, 0x8);
+			// Go to state 0x2 right after state 0x0
+			// To do the rank calc
+			WriteData<1>((void *)0x450812, 0x2);
+			// Skip fade in state 2
+			WriteData<1>((void*)0x450876, 0xff);
+			// Go to state 0x7
+			// for part 2 of rank calc
+			WriteData<1>((void*)0x4508ac, 0x7);
+			// Skip score window/display total rings
+			WriteData<5>((void*)0x4508ca, 0x90);
+			WriteData<5>((void*)0x4508df, 0x90);
+			// Skip delay in state 7
+			WriteData<1>((void*)0x4509c3, 0x00);
+			// Skip save in state 7
+			WriteData<5>((void*)0x4509e4, 0x90);
 
 			// NotCalcTotalScore
 			// Go to state 0x10 right after state 0x0
