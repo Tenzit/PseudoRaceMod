@@ -11,10 +11,10 @@
 			<Property name="CutsceneSkip" display="Cutscene Skip" type="bool" defaultvalue="true">
 				<HelpText>Skip cutscenes between levels.</HelpText>
 			</Property>	
-			<Property name="ResultsSkip" display="Cutscene Skip" type="bool" defaultvalue="true">
+			<Property name="ResultsSkip" display="Results Skip" type="bool" defaultvalue="true">
 				<HelpText>Skip results screens.</HelpText>
 			</Property>
-			<Property name="StageNameSkip" display="Cutscene Skip" type="bool" defaultvalue="true">
+			<Property name="StageNameSkip" display="Stage Name Skip" type="bool" defaultvalue="true">
 				<HelpText>Skip stage name/mission being displayed when loading the level</HelpText>
 			</Property>
 	</Group>
