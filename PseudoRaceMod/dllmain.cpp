@@ -56,20 +56,15 @@ extern "C"
 			// Go to state 0xc
 			// for part 2 of rank calc
 			WriteData<1>((void*)0x44f8eb, 0xc);
+			// Skip ScoreWindow
+			WriteData<5>((void*)0x44f909, 0x90);
 			// Skip the score countup
 			WriteData<2>((void*)0x44fae5, 0x90);
 			WriteData<2>((void*)0x44faeb, 0x90);
 			// Set next state to 0x10
 			WriteData<1>((void*)0x44fb0a, 0x10);
-			// Skip cash register sfx (2 spots)
-			WriteData<5>((void*)0x44fb0e, 0x90);
-			WriteData<5>((void*)0x44fba0, 0x90);
-			// Skip loop in state 0xc
-			WriteData<0x2f>((void*)0x44fb1e, 0x90);
 			// Skip saving file in state 0xc
 			WriteData<5>((void*)0x44fb63, 0x90);
-			// Skip random function at the end of 0x10
-			WriteData<5>((void*)0x44fcec, 0x90);
 
 			// CalcTotalTime
 			// Don't display HUD function
